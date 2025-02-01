@@ -1,0 +1,14 @@
+.star {
+    background-color: navy;
+    color: yellow;
+}
+
+.intro {
+    border: 10px solid aqua;
+}
+
+h2.presentation {
+    color: yellow;
+    font-size: 2rem;
+    text-align: center;
+}
