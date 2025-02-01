@@ -1,14 +1,38 @@
-.star {
-    background-color: navy;
-    color: yellow;
-}
 
-.intro {
-    border: 10px solid aqua;
+html {
+    border: 10px solid yellow;
+	font-size: 14px;
+	background-color: #96d14a;
+	width: max-width;
 }
-
-h2.presentation {
-    color: yellow;
-    font-size: 2rem;
+page {
+	text-align: center;
+	background-color: #ace461;
+	width: 70%;
+}
+h2 {
+    color: brown;
+    font-size: 20px;
     text-align: center;
+}
+h1 {
+	color: #2b430d;
+	font-size: 40px;
+	text-align: center;
+}
+footer {
+	text-align: center;
+	background-color: #f2f347;
+}
+table {
+	background-color: #ccf254;
+	border: dashed green;
+}
+img {
+	display: block;
+}
+entete {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
 }
