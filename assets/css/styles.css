@@ -1,15 +1,18 @@
-page {
-	text-align: center;
-	background-color: red;
-	width: 80%;
+html {
+	background-image: url("https://imgs.search.brave.com/TS1pAH61B5jv6r0lFBW3IlMmD8NVT_A2SaymobHmbzw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJhY2Nlc3Mu/Y29tL2Z1bGwvODA4/NzI2LmpwZw");
+	margin-left: 300px;
+	margin-right: 300px;
 }
 
 body {
 	font-size: 14px;
-	background-color: #96d14a;
+	margin: 0px;
+}
+
+div.page {
 	border: 10px solid yellow;
-	margin-left: 50px;
-	margin-right: 50px;
+	background-color: #96d14a;
+	width: 100%;
 }
 
 h2 {
@@ -25,18 +28,56 @@ h1 {
 footer {
 	text-align: center;
 	background-color: #f2f347;
+	margin-bottom: 0px;
 }
 table {
+	margin-left: 100px;
 	background-color: #ccf254;
 	border: dashed green;
 }
+table, td, th {
+	padding: 3px;
+}
+th, td{
+	text-align: left;
+	border: 1px solid green;
+}
+
 img {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
+}
+div.Pippin{
+	display: block;
+	border-radius: 10px;
 	border: dotted yellow;
+	padding: 0px;
 }
-entete {
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 33.33%;
+  padding: 5px;
+}
+
+div.entete {
 	text-align: center;
+	margin-bottom: 50px;
 }
+
+ul{
+	margin-left: 100px;
+	margin-right: 500px;
+	border: dashed green;
+	background-color: #ccf254;
+	text-align: left;
+}
+h3{
+	margin: 5px;
+}
+
+
 /*light green : #ace461*/
