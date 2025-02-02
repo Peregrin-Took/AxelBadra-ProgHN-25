@@ -1,15 +1,17 @@
-
-html {
-    border: 10px solid yellow;
-	font-size: 14px;
-	background-color: #96d14a;
-	width: max-width;
-}
 page {
 	text-align: center;
-	background-color: #ace461;
-	width: 70%;
+	background-color: red;
+	width: 80%;
 }
+
+body {
+	font-size: 14px;
+	background-color: #96d14a;
+	border: 10px solid yellow;
+	margin-left: 50px;
+	margin-right: 50px;
+}
+
 h2 {
     color: brown;
     font-size: 20px;
@@ -30,9 +32,11 @@ table {
 }
 img {
 	display: block;
-}
-entete {
 	margin-left: auto;
 	margin-right: auto;
+	border: dotted yellow;
+}
+entete {
 	text-align: center;
 }
+/*light green : #ace461*/
