@@ -44,23 +44,24 @@ th, td{
 }
 
 img {
-	display: block;
+	display: inline;
 	margin-left: auto;
 	margin-right: auto;
 }
 div.Pippin{
-	display: block;
 	border-radius: 10px;
 	border: dotted yellow;
-	padding: 0px;
 }
-.row {
+div.row {
+	width: 100%;
   display: flex;
+  height: auto;
 }
-
-.column {
+div.column {
   flex: 33.33%;
   padding: 5px;
+  max-width: 100%;
+  height: auto;
 }
 
 div.entete {
