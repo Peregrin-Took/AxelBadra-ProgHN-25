@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang=en>
+<html lang="en">
 
 <head>
 <title>Programmation pour les humanités numériques</title>
@@ -7,17 +7,31 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="UTF-8">
 <link rel="stylesheet" href="assets/css/styles.css">
+<script src="assets/js/scripts.js"></script>
 </head>
+
 
 <body>
 <div class="entete">
+
+<!--barre de progression-->
+<div class="header">
+<div class="progress-container">
+<div class="progress-bar" id="myBar"></div>
+<script>
+window.onscroll = function() {myFunction()};
+</script>
+</div>  
+</div>
+
+<!-- Titre+images -->
 <br>
 <h1>Peregrin Took</h1>
 <h2>Hobbit from the Shire</h2>
 <br>
 <div class="row">
 <div class="column">
-<img src="assets/img/tree.png"> 
+<img src="assets/img/tree.png" alt="Tree"> 
 </div>
 <div class="column">
 <div class="Pippin">
@@ -25,12 +39,13 @@
 </div>
 </div>
 <div class="column">
-<img src="assets/img/tolkien.png">
+<img src="assets/img/tolkien.png" alt="Logo">
 </div>
 </div>
 </div>
 <br>
 
+<!-- Tableaux -->
 <div class="aboutme">
 <table>
 <thead>
@@ -65,6 +80,27 @@
 </ul>
 </div>
 <br>
+
+<!--JS TD1 (src script en head) : form + button --> 
+<div class="highlight">
+<form name="myForm">
+  Your name: <input type="text" name="fname">
+  <input type="submit" value="Submit" onclick="Form();">
+</form>
+</div>
+<h2>☆.𓋼𓍊 𓆏 𓍊𓋼𓍊.☆</h2>
+<div class="highlight">
+<p id="demo">What do we fight for?</p><button type="button" onclick='document.getElementById("demo").innerHTML = "Death!"'>Answer</button>
+</div>
+<h2>☆.𓋼𓍊 𓆏 𓍊𓋼𓍊.☆</h2>
+
+<!-- read txt file : pas compris, script de https://www.delftstack.com/fr/howto/javascript/read-text-file-in-javascript/ dans site/assets/scripts.js -->
+<div class="highlight">
+<input type="file" name="inputFile" id="inputFile">
+<br>
+<pre id="output"></pre>
+</div>
+
 <footer>
 <a href="https://lotr.fandom.com/wiki/Peregrin_Took">Wiki page</a>
 </footer>

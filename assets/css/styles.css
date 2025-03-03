@@ -3,33 +3,43 @@ html {
 	margin-left: 300px;
 	margin-right: 300px;
 }
-
 body {
 	font-size: 14px;
 	margin: 0px;
 }
-
 div.page {
 	border: 10px solid yellow;
 	background-color: #96d14a;
 	width: 100%;
 }
 
+/*en-tête*/
+div.entete {
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+/*titres et footer*/
+h1 {
+	color: #2b430d;
+	font-size: 40px;
+	text-align: center;
+}
 h2 {
     color: brown;
     font-size: 20px;
     text-align: center;
 }
-h1 {
-	color: #2b430d;
-	font-size: 40px;
-	text-align: center;
+h3{
+	margin: 5px;
 }
 footer {
 	text-align: center;
 	background-color: #f2f347;
 	margin-bottom: 0px;
 }
+
+/*mise en forme du tableau*/
 table {
 	margin-left: 100px;
 	background-color: #ccf254;
@@ -43,31 +53,30 @@ th, td{
 	border: 1px solid green;
 }
 
+/*mise en forme des images*/
 img {
-	display: inline;
 	margin-left: auto;
 	margin-right: auto;
+	justify-content: center;
+	align-items: stretch;
 }
-div.Pippin{
+div.Pippin {
 	border: dotted yellow;
+	padding: 10px;
 }
 div.row {
-	width: 100%;
+  width: 100%;
   display: flex;
   height: auto;
 }
 div.column {
   flex: 33.33%;
-  padding: 5px;
+  padding: 10px;
   max-width: 100%;
   height: auto;
 }
 
-div.entete {
-	text-align: center;
-	margin-bottom: 50px;
-}
-
+/*mise en forme de la liste*/
 ul{
 	margin-left: 100px;
 	margin-right: 500px;
@@ -75,9 +84,29 @@ ul{
 	background-color: #ccf254;
 	text-align: left;
 }
-h3{
-	margin: 5px;
+
+/*mise en avant des form+button*/
+div.highlight {
+	text-align: center;
+	background-color: #ace461;
 }
 
-
-/*light green : #ace461*/
+/* progress bar*/
+div.header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 60.5%;
+  background-color: #ace461;
+}
+.progress-container {
+  position: fixed;
+  width: 60.5%;
+  height: 10px;
+  background: #ccc;
+}
+.progress-bar {
+  height: 10px;
+  background: #04AA6D;
+  width: 0%;
+}
