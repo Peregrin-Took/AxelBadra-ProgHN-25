@@ -1,4 +1,4 @@
-html {
+html { 
 	background-image: url("https://imgs.search.brave.com/TS1pAH61B5jv6r0lFBW3IlMmD8NVT_A2SaymobHmbzw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJhY2Nlc3Mu/Y29tL2Z1bGwvODA4/NzI2LmpwZw");
 	margin-left: 300px;
 	margin-right: 300px;
@@ -10,7 +10,8 @@ body {
 div.page {
 	border: 10px solid yellow;
 	background-color: #96d14a;
-	width: 100%;
+	position: relative;
+	min-height: 100%;
 }
 
 /*en-tête*/
@@ -91,7 +92,34 @@ div.highlight {
 	background-color: #ace461;
 }
 
-/* progress bar*/
+/*base du projet, exercice en classe*/
+.mylabel {
+	background-color: rgb(255, 204, 51);
+	font-family: arial,helvetica,sans-serif;
+	font-variant: small-caps;
+	font-size: 90%;
+	padding: 2px;
+	border-right: 1px solid rgb(204, 153, 0);
+	border-bottom: 1px solid rgb(204, 153, 0);
+}
+.infolog {
+	text-align:center;
+	border: 2pt solid rgb(0, 128, 0);
+	padding: 1pt;
+	margin-left: 0px;
+	margin-right: 0px;
+	background: rgb(128, 255, 128);
+}
+.errorlog {
+	text-align:center;
+	border: 2pt solid rgb(255, 0, 0);
+	padding: 2pt;
+	margin-left: 0px;
+	margin-right: 0px;
+	background-color: rgb(255, 96, 96);
+}
+
+/* progress bar (brouillon/pas compris)
 div.header {
   position: fixed;
   top: 0;
@@ -109,4 +137,4 @@ div.header {
   height: 10px;
   background: #04AA6D;
   width: 0%;
-}
+}*/

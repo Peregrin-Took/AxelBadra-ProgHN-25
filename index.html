@@ -1,20 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> <!--page en anglais-->
 
 <head>
 <title>Programmation pour les humanités numériques</title>
 <div class="page">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="UTF-8">
-<link rel="stylesheet" href="assets/css/styles.css">
-<script src="assets/js/scripts.js"></script>
+<link rel="stylesheet" href="assets/css/styles.css"> <!--emplacement du fichier css pour les styles-->
 </head>
 
 
 <body>
-<div class="entete">
+<div class="entete"> <!--en-tête avec titre et images-->
 
-<!--barre de progression-->
+<!--barre de progression (pas compris, brouillon)
 <div class="header">
 <div class="progress-container">
 <div class="progress-bar" id="myBar"></div>
@@ -22,14 +21,14 @@
 window.onscroll = function() {myFunction()};
 </script>
 </div>  
-</div>
+</div>-->
 
-<!-- Titre+images -->
+<!-- Titre+images : 3 colonnes sur 1 ligne pour répartir les 3 images -->
 <br>
 <h1>Peregrin Took</h1>
 <h2>Hobbit from the Shire</h2>
 <br>
-<div class="row">
+<div class="row"> <!-- divs renvoient au fichier css -->
 <div class="column">
 <img src="assets/img/tree.png" alt="Tree"> 
 </div>
@@ -45,65 +44,114 @@ window.onscroll = function() {myFunction()};
 </div>
 <br>
 
-<!-- Tableaux -->
+<!-- Tableau et liste non ordonnée -->
 <div class="aboutme">
 <table>
-<thead>
-<tr>
-<th>Successive titles:</th>
-<th>Date:</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Guard of the Citadel</td> 
-<td>March 9th T.A. 3019</td>
-</tr>
-<tr>
-<td>Knight of Gondor</td>
-<td>May 1st T.A. 3019</td>
-</tr>
-<tr>
-<td>Shire-thain</td>
-<td>F.O. 13/S.R. 1434</td>
-</tr>
-</tbody>
+	<thead>
+	<tr>
+	<th>Successive titles:</th>
+	<th>Date:</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+	<td>Guard of the Citadel</td> 
+	<td>March 9th T.A. 3019</td>
+	</tr>
+	<tr>
+	<td>Knight of Gondor</td>
+	<td>May 1st T.A. 3019</td>
+	</tr>
+	<tr>
+	<td>Shire-thain</td>
+	<td>F.O. 13/S.R. 1434</td>
+	</tr>
+	</tbody>
 </table>
 <br>
 <ul>
-<h3>Alternate names:</h3>
-<li>Pippin</li>
-<li>Razanur Tûk</li>
-<li><em>Ernil i Pheriannath</em></li>
-<li>Thain Peregrin I</li>
-<li>Fool of a Took</li>
+	<h3>Alternate names:</h3>
+	<li>Pippin</li>
+	<li>Razanur Tûk</li>
+	<li><em>Ernil i Pheriannath</em></li>
+	<li>Thain Peregrin I</li>
+	<li>Fool of a Took</li>
 </ul>
 </div>
 <br>
 
-<!--JS TD1 (src script en head) : form + button --> 
-<div class="highlight">
+<!--JS TD1 (src script juste avant la fin de body) : form + button --> 
+<div class="highlight"> <!--formulaire-->
 <form name="myForm">
   Your name: <input type="text" name="fname">
   <input type="submit" value="Submit" onclick="Form();">
 </form>
 </div>
 <h2>☆.𓋼𓍊 𓆏 𓍊𓋼𓍊.☆</h2>
-<div class="highlight">
-<p id="demo">What do we fight for?</p><button type="button" onclick='document.getElementById("demo").innerHTML = "Death!"'>Answer</button>
+<div class="highlight"> <!--bouton-->
+	<div id="messageDiv"></div> <!--crée une division pour le message à afficher et lui donne un identifiant-->
+	<br>
+	<button id="AnswerMe">Answer</button><!--crée un bouton Answer et lui donne un identifiant-->
 </div>
 <h2>☆.𓋼𓍊 𓆏 𓍊𓋼𓍊.☆</h2>
 
-<!-- read txt file : pas compris, script de https://www.delftstack.com/fr/howto/javascript/read-text-file-in-javascript/ dans site/assets/scripts.js -->
+<!-- read txt file : pas compris, script de https://www.delftstack.com/fr/howto/javascript/read-text-file-in-javascript/ dans site/assets/scripts.js
 <div class="highlight">
-<input type="file" name="inputFile" id="inputFile">
+<input type="file" name="inputFile" id="inputFile"> <!--crée une boîte permettant de séléctionner un fichier--
 <br>
-<pre id="output"></pre>
-</div>
+<pre id="output"></pre><!--crée une balise <pre> vide pour afficher le texte du document sélectionné--
+</div>-->
 
-<footer>
+<!--base du projet, exercice en classe-->
+<div class="highlight">
+				<span>
+					<label for="fileInput" class="btn"><small>Sélectionner un fichier au format .txt :</small></label>
+					<input id="fileInput" type="file" accept="text/plain" name="Fichier (.txt)" />
+				</span>
+			</div>
+			<br />
+			<p style="text-align:center;">
+				<small>
+					<label for="delimID" class="mylabel">Délimiteur(s)</label>
+					&nbsp;
+					<input type="text" value=" ,;’'~|&#@=`-.?!%*$()[]{}_:+«»§\/" name="delim" id="delimID" size="40" />
+				</small>
+				<br />
+				<small>
+					<label for="poleID" class="mylabel">Pôle</label>
+					&nbsp;
+					<input type="text" placeholder="entrez un pôle..." name="pole" id="poleID" size="20" />
+				</small>
+				&nbsp;
+				<small>
+					<label for="lgID" class="mylabel">Longueur</label>
+					&nbsp;
+					<input type="text" value="10" name="lg" id="lgID" size="10" />
+				</small>
+				<br />
+				<br />
+				<button onclick="alert('bonjour');"><span>Bonjour</span></button>
+				<br />
+				<br />
+				<button class="submit" onclick="alert('Je ne fais rien, changez-moi !');"><span>Segmentation</span></button>
+				<button class="submit" onclick="alert('Je ne fais rien, changez-moi !');"><span>action 1</span></button>
+				<button class="submit" onclick="alert('Je ne fais rien, changez-moi !')"><span>action 2</span></button>
+				<button class="submit" onclick="alert('Je ne fais rien, changez-moi !')"><span>action 3</span></button>
+				<button class="submit" onclick="alert('Je ne fais rien, changez-moi !')"><span>action 4</span></button>
+				<button class="submit" onclick="alert('Je ne fais rien, changez-moi !')"><span>action 5</span></button>
+				<button class="submit" onclick="alert('Je ne fais rien, changez-moi !')"><span>action 6</span></button>
+			</p>
+		<div id="logger" style="width:100%"></div>
+		<br />
+		<div id="Global">
+			<div id="fileDisplayArea"></div>
+			<div id="page-analysis"></div>
+		</div>
+
+<footer> <!-- bas de page, lien vers le wiki-->
 <a href="https://lotr.fandom.com/wiki/Peregrin_Took">Wiki page</a>
 </footer>
 </div>
+<script src="assets/js/scripts.js"></script> <!--emplacement du ficier javascript pour les scripts-->
 </body>
 </html>
