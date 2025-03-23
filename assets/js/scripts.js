@@ -23,13 +23,12 @@ AnswerMe.addEventListener('click', function () {/*crée un EventListener qui ex�
     }
     showFirstMessage = !showFirstMessage;/*si showFirstMessage est vrai, il le change en faux, et inversement, ce qui permet de répéter l'action*/
 });
-	
-
 
 /*base du projet, code de l'exercice en classe*/
 window.onload = function() {
     let fileInput = document.getElementById('fileInput');
     let fileDisplayArea = document.getElementById('fileDisplayArea');
+
     // On "écoute" si le fichier donné a été modifié.
     // Si on a donné un nouveau fichier, on essaie de le lire.
     fileInput.addEventListener('change', function(e) {
@@ -44,11 +43,13 @@ window.onload = function() {
         if (file.type.match(textType)) { // on vérifie qu'on a bien un fichier texte
             // lecture du fichier. D'abord, on crée un objet qui sait lire un fichier.
             var reader = new FileReader();
+
             // on dit au lecteur de fichier de placer le résultat de la lecture
             // dans la zone d'affichage du texte.
             reader.onload = function(e) {
                 fileDisplayArea.innerText = reader.result;
             }
+
             // on lit concrètement le fichier.
             // Cette lecture lancera automatiquement la fonction "onload" juste au-dessus.
             reader.readAsText(file);    
@@ -59,22 +60,50 @@ window.onload = function() {
             document.getElementById("logger").innerHTML = '<span class="errorlog">Type de fichier non supporté !</span>';
         }
     });
+	};
+
+/*segmentation du texte*/	
+function Segmentation() {
+	let fileText = document.getElementById("fileDisplayArea").innerText; //définit fileText comme le texte affiché dans la div "fileDisplayArea", donc le texte lu par le file reader précédemment
+	let separateur = ","; //définit le séparateur comme ","
+	if (fileText === "") { 
+		alert("Pas de texte à segmenter!"); //si le texte est vide, alerter "Pas de texte à segmenter!"
+	}else{
+		let segments = fileText.split(separateur); //sinon, définit "segments" comme le texte divisé par les instances de ","
+		document.getElementById("page-analysis").innerHTML = segments.join(" ||| "); //affiche les segments joints par " ||| " au lieu de "," dans la div "page-analysis"
+	}
 }
 
-const delimInput = document.getElementById('delimID');
-const delimiters = delimInput.value;
-const segments = segmentText(fileContent, delimiters);
+/*exercice 4 du TD7*/
+function exercice4() {
+	let separateur2 = " "; //définit le séparateur comme un espace
+	let monTexte = document.getElementById("texteExercice4").value; //assigne à "monTexte" la valeur de ce qui est contenu dans la boîte "texteExercice4"
+	if (monTexte === "") { 
+		alert("Pas de texte à segmenter!"); //si le texte est vide, alerter "Pas de texte à segmenter!"
+	}else{
+		let segments2 = monTexte.split(separateur2); //sinon, définit "segments" comme le texte divisé par les espaces
+		let tableHTML = "<table class='table'>"; //crée un tableau html suivant le style "table" défini dans assets/css/styles.css
+		tableHTML += "<tr><th>N° du mot</th><th>Mot</th></tr>"; //ajoute la première ligne du tableau avec deux colonnes : n° de mot et mot
+		segments2.forEach((segment, index) => { //utilise la méthode forEach, appliquée aux éléments "segment" (les mots segmentés) et "index" avec la fonction fléchée
+		tableHTML += `<tr><td>${index + 1}</td><td>${segment}</td></tr>`; //pour chaque segment, il ajoute une ligne dans le tableau avec une colonne index, débutant à 1, et le mot correspondant dans une deuxème colonne, jusqu'à n'avoir plus d'élément à ajouter
+        });
+        tableHTML += "</table>"; //ferme le tableau
+        document.getElementById("exercice4Resultat").innerHTML = tableHTML; //affiche le tableau dans la div "exercice4Resultat"
+    }
+}
 
-//brouillons, code non compris
-/*read txt file : lien de la source du code dans la page html, je n'ai pas compris comment le faire moi-même donc j'essaie de comprendre les étapes du code de quelqu'un d'autre*/
-document.getElementById('inputFile').addEventListener('change', function() { /*sélectionne l'élément inputFile défini dans le code html et crée un EventListener pour l'élément change, déclenché quand on sélectionne un fichier*/
-        var file = new FileReader(); /*crée une variable "file" définie comme un nouvel objet FileReader, qui permet de lire le contenu du fichier sélectionné*/
-        file.onload = () => { /*définit la fonction qui est exécutée après*/
-          document.getElementById('output').textContent = file.result; /*sélectionne l'élément "output" défini dans le code html, donc la balise <pre>, et y affiche le résultat de la lecture du fichier*/
-        }
-        file.readAsText(this.files[0]);
-      }
-	  )	   
+
+
+
+
+
+
+
+
+//brouillons + code non compris, à modifier plus tard
+
+//let separateur = document.getElementById("delimID").value;
+  
 /*barre de progression
 function myFunction() {
   var winScroll = document.body.scrollTop || document.documentElement.scrollTop;

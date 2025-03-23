@@ -46,6 +46,7 @@ window.onscroll = function() {myFunction()};
 
 <!-- Tableau et liste non ordonnée -->
 <div class="aboutme">
+<div class="highlight">
 <table>
 	<thead>
 	<tr>
@@ -78,6 +79,7 @@ window.onscroll = function() {myFunction()};
 	<li>Fool of a Took</li>
 </ul>
 </div>
+</div>
 <br>
 
 <!--JS TD1 (src script juste avant la fin de body) : form + button --> 
@@ -95,20 +97,13 @@ window.onscroll = function() {myFunction()};
 </div>
 <h2>☆.𓋼𓍊 𓆏 𓍊𓋼𓍊.☆</h2>
 
-<!-- read txt file : pas compris, script de https://www.delftstack.com/fr/howto/javascript/read-text-file-in-javascript/ dans site/assets/scripts.js
-<div class="highlight">
-<input type="file" name="inputFile" id="inputFile"> <!--crée une boîte permettant de séléctionner un fichier--
-<br>
-<pre id="output"></pre><!--crée une balise <pre> vide pour afficher le texte du document sélectionné--
-</div>-->
-
 <!--base du projet, exercice en classe-->
+<div id="InputEtSegmentation">
 <div class="highlight">
 				<span>
 					<label for="fileInput" class="btn"><small>Sélectionner un fichier au format .txt :</small></label>
 					<input id="fileInput" type="file" accept="text/plain" name="Fichier (.txt)" />
 				</span>
-			</div>
 			<br />
 			<p style="text-align:center;">
 				<small>
@@ -133,7 +128,7 @@ window.onscroll = function() {myFunction()};
 				<button onclick="alert('bonjour');"><span>Bonjour</span></button>
 				<br />
 				<br />
-				<button class="submit" onclick="alert('Je ne fais rien, changez-moi !');"><span>Segmentation</span></button>
+				<button class = "submit" id="segmentButton" onclick="Segmentation()"><span>Segmentation</span></button>
 				<button class="submit" onclick="alert('Je ne fais rien, changez-moi !');"><span>action 1</span></button>
 				<button class="submit" onclick="alert('Je ne fais rien, changez-moi !')"><span>action 2</span></button>
 				<button class="submit" onclick="alert('Je ne fais rien, changez-moi !')"><span>action 3</span></button>
@@ -146,7 +141,21 @@ window.onscroll = function() {myFunction()};
 		<div id="Global">
 			<div id="fileDisplayArea"></div>
 			<div id="page-analysis"></div>
-		</div>
+		</div>	
+</div>
+</div>
+<h2>☆.𓋼𓍊 𓆏 𓍊𓋼𓍊.☆</h2>
+
+<!--exercice TD7-4-->
+<div class="highlight">
+<h2 style="color:darkgreen">Exercice 4 du TD7 : Découper le texte selon les espaces + créer un tableau</h2>
+    <br/>
+        <textarea id="texteExercice4" name="mon_texte" rows="10" cols="50">Ici, on entre du texte qu'on va segmenter en "mots".</textarea>
+        <br/>
+        <button onclick="exercice4()">Segmenter le texte dans un tableau.</button>
+        <div id="exercice4Resultat"></div>
+</div>
+
 
 <footer> <!-- bas de page, lien vers le wiki-->
 <a href="https://lotr.fandom.com/wiki/Peregrin_Took">Wiki page</a>

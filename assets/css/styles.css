@@ -42,9 +42,10 @@ footer {
 
 /*mise en forme du tableau*/
 table {
-	margin-left: 100px;
+	margin-left: 35%;
 	background-color: #ccf254;
 	border: dashed green;
+	border-collapse: collapse;
 }
 table, td, th {
 	padding: 3px;
@@ -79,14 +80,14 @@ div.column {
 
 /*mise en forme de la liste*/
 ul{
-	margin-left: 100px;
-	margin-right: 500px;
+	margin-left: 35%;
+	margin-right: 36%;
 	border: dashed green;
 	background-color: #ccf254;
 	text-align: left;
 }
 
-/*mise en avant des form+button*/
+/*mise en avant*/
 div.highlight {
 	text-align: center;
 	background-color: #ace461;
