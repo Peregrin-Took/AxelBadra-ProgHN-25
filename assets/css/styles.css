@@ -1,17 +1,26 @@
 html { 
 	background-image: url("https://imgs.search.brave.com/TS1pAH61B5jv6r0lFBW3IlMmD8NVT_A2SaymobHmbzw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJhY2Nlc3Mu/Y29tL2Z1bGwvODA4/NzI2LmpwZw");
-	margin-left: 300px;
-	margin-right: 300px;
+	margin-left: 90px;
+	margin-right: 90px;
 }
 body {
 	font-size: 14px;
 	margin: 0px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	height: 100%;
+	max-width: 100%;
 }
+
 div.page {
 	border: 10px solid yellow;
 	background-color: #96d14a;
 	position: relative;
 	min-height: 100%;
+	max-width: 90%;
 }
 
 /*en-tête*/
@@ -34,26 +43,6 @@ h2 {
 h3{
 	margin: 5px;
 }
-footer {
-	text-align: center;
-	background-color: #f2f347;
-	margin-bottom: 0px;
-}
-
-/*mise en forme du tableau*/
-table {
-	margin-left: 35%;
-	background-color: #ccf254;
-	border: dashed green;
-	border-collapse: collapse;
-}
-table, td, th {
-	padding: 3px;
-}
-th, td{
-	text-align: left;
-	border: 1px solid green;
-}
 
 /*mise en forme des images*/
 img {
@@ -64,6 +53,7 @@ img {
 }
 div.Pippin {
 	border: dotted yellow;
+	border-radius: 10px;
 	padding: 10px;
 }
 div.row {
@@ -78,10 +68,46 @@ div.column {
   height: auto;
 }
 
+button { 
+	cursor: pointer;
+	color: #27591d;
+	background-color: #fdf862;
+	border: none;
+    border-radius: 5px; 
+	padding: 5px;
+}
+button:hover {
+	color: #439333;
+	background-color: #fffb8f;
+}
+
+
+div.tablelist {
+	display: flex;
+	gap: 20px;
+	justify-content: center;
+	max-width: 100%;
+}
+
+/*mise en forme du tableau*/
+table {
+	width: auto;
+	background-color: #ccf254;
+	border: dashed green;
+	border-collapse: collapse;
+}
+table, td, th {
+	padding: 3px;
+}
+th, td{
+	text-align: left;
+	border: 1px solid green;
+}
+
 /*mise en forme de la liste*/
 ul{
-	margin-left: 35%;
-	margin-right: 36%;
+	width: auto;
+	margin: 0;
 	border: dashed green;
 	background-color: #ccf254;
 	text-align: left;
@@ -119,6 +145,17 @@ div.highlight {
 	margin-right: 0px;
 	background-color: rgb(255, 96, 96);
 }
+
+footer {
+	text-align: center;
+	background-color: #f2f347;
+	margin-bottom: 0px;
+}
+
+
+
+
+
 
 /* progress bar (brouillon/pas compris)
 div.header {

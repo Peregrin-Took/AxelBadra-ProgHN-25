@@ -8,7 +8,7 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" href="assets/css/styles.css"> <!--emplacement du fichier css pour les styles-->
 </head>
-
+<!-- Note : src script juste avant la fin de body--> 
 
 <body>
 <div class="entete"> <!--en-tête avec titre et images-->
@@ -25,7 +25,7 @@ window.onscroll = function() {myFunction()};
 
 <!-- Titre+images : 3 colonnes sur 1 ligne pour répartir les 3 images -->
 <br>
-<h1>Peregrin Took</h1>
+<h1>PEREGRIN TOOK</h1>
 <h2>Hobbit from the Shire</h2>
 <br>
 <div class="row"> <!-- divs renvoient au fichier css -->
@@ -34,7 +34,7 @@ window.onscroll = function() {myFunction()};
 </div>
 <div class="column">
 <div class="Pippin">
-<img src="assets/img/Pippin.jpg" alt="Peregrin Took">
+<img src="assets/img/Pippin.jpg" style="border-radius: 10px;" alt="Peregrin Took">
 </div>
 </div>
 <div class="column">
@@ -42,11 +42,22 @@ window.onscroll = function() {myFunction()};
 </div>
 </div>
 </div>
+
+<!--bouton-->
+<div id="Question">
+	<div id="messageDiv" style="font-size: 16px;">What do we fight for?</div> <!--crée une division pour le message à afficher et lui donne un identifiant-->
+	<br>
+	<button id="AnswerMe">Answer</button><!--crée un bouton Answer et lui donne un identifiant-->
+</div>
 <br>
 
+<div class="highlight"><!--mise en valeur de la section-->
+<div class="aboutme"> 
+<h2>☆.𓋼𓍊 𓆏 𓍊𓋼𓍊.☆</h2>
+	
 <!-- Tableau et liste non ordonnée -->
-<div class="aboutme">
-<div class="highlight">
+<div class="tablelist">
+<br/>
 <table>
 	<thead>
 	<tr>
@@ -71,66 +82,59 @@ window.onscroll = function() {myFunction()};
 </table>
 <br>
 <ul>
-	<h3>Alternate names:</h3>
+	<h3>Alternate names:   </h3>
 	<li>Pippin</li>
 	<li>Razanur Tûk</li>
 	<li><em>Ernil i Pheriannath</em></li>
 	<li>Thain Peregrin I</li>
 	<li>Fool of a Took</li>
 </ul>
+<br/>
 </div>
-</div>
-<br>
 
-<!--JS TD1 (src script juste avant la fin de body) : form + button --> 
-<div class="highlight"> <!--formulaire-->
-<form name="myForm">
+<br/>
+<form name="myForm"><!--formulaire-->
   Your name: <input type="text" name="fname">
   <input type="submit" value="Submit" onclick="Form();">
 </form>
-</div>
-<h2>☆.𓋼𓍊 𓆏 𓍊𓋼𓍊.☆</h2>
-<div class="highlight"> <!--bouton-->
-	<div id="messageDiv">What do we fight for?</div> <!--crée une division pour le message à afficher et lui donne un identifiant-->
-	<br>
-	<button id="AnswerMe">Answer</button><!--crée un bouton Answer et lui donne un identifiant-->
-</div>
+
 <h2>☆.𓋼𓍊 𓆏 𓍊𓋼𓍊.☆</h2>
 
-<!--base du projet, exercice en classe-->
+<!--base du projet, exercices en classe-->
 <div id="InputEtSegmentation">
-<div class="highlight">
 				<span>
-					<label for="fileInput" class="btn"><small>Sélectionner un fichier au format .txt :</small></label>
+					<label for="fileInput" class="btn"><small>Select a .txt file :</small></label>
 					<input id="fileInput" type="file" accept="text/plain" name="Fichier (.txt)" />
 				</span>
+				<br/>
+        <textarea id="texteExercice4" name="mon_texte" rows="10" cols="40" placeholder="Enter here the text you want to segment into 'words'."></textarea>
 			<br />
 			<p style="text-align:center;">
 				<small>
-					<label for="delimID" class="mylabel">Délimiteur(s)</label>
+					<label for="delimID" class="mylabel">Delimiter(s)</label>
 					&nbsp;
-					<input type="text" value=" ,;’'~|&#@=`-.?!%*$()[]{}_:+«»§\/" name="delim" id="delimID" size="40" />
+					<input type="text" placeholder=" ,;’'~|&#@=`-.?!%*$()[]{}_:+«»§\/" name="delim" id="delimID" size="40" />
 				</small>
 				<br />
-				<small>
+				<!--<small>
 					<label for="poleID" class="mylabel">Pôle</label>
 					&nbsp;
 					<input type="text" placeholder="entrez un pôle..." name="pole" id="poleID" size="20" />
 				</small>
-				&nbsp;
+				&nbsp;-->
 				<small>
-					<label for="lgID" class="mylabel">Longueur</label>
+					<label for="lgID" class="mylabel">Length</label>
 					&nbsp;
 					<input type="text" value="10" name="lg" id="lgID" size="10" />
 				</small>
 				<br />
 				<br />
-				<button onclick="alert('bonjour');"><span>Bonjour</span></button>
+				<button onclick="alert('Greetings!');"><span>Greetings.</span></button>
 				<br />
 				<br />
-				<button class = "submit" id="segmentButton" onclick="Segmentation()"><span>Segmentation</span></button>
-				<button class="submit" onclick="alert('Je ne fais rien, changez-moi !');"><span>action 1</span></button>
-				<button class="submit" onclick="alert('Je ne fais rien, changez-moi !')"><span>action 2</span></button>
+				<button class = "submit" id="segmentButton" onclick="Segmentation()"><span>Segmentation (txt file)</span></button>
+				<button class="submit" onclick="exercice4()"><span>Segmentation (text entered above)</span></button>
+				<button class="submit" onclick="dictionnaire()"><span>Dictionary</span></button>
 				<button class="submit" onclick="alert('Je ne fais rien, changez-moi !')"><span>action 3</span></button>
 				<button class="submit" onclick="alert('Je ne fais rien, changez-moi !')"><span>action 4</span></button>
 				<button class="submit" onclick="alert('Je ne fais rien, changez-moi !')"><span>action 5</span></button>
@@ -139,27 +143,28 @@ window.onscroll = function() {myFunction()};
 		<div id="logger" style="width:100%"></div>
 		<br />
 		<div id="Global">
+	<h2>Text display area:</h2>
 			<div id="fileDisplayArea"></div>
-			<div id="page-analysis"></div>
+			<br/>
+			<div class="tablelist">
+				<div id="page-analysis"></div>
+			</div>
+	<h2>Tokens display area :</h2>
+			<div class="tablelist">
+				<div id="tokens-display"></div>
+			</div>
 		</div>	
 </div>
 </div>
 <h2>☆.𓋼𓍊 𓆏 𓍊𓋼𓍊.☆</h2>
+<br/>
 
-<!--exercice TD7-4-->
-<div class="highlight">
-<h2 style="color:darkgreen">Exercice 4 du TD7 : Découper le texte selon les espaces + créer un tableau</h2>
-    <br/>
-        <textarea id="texteExercice4" name="mon_texte" rows="10" cols="50">Ici, on entre du texte qu'on va segmenter en "mots".</textarea>
-        <br/>
-        <button onclick="exercice4()">Segmenter le texte dans un tableau.</button>
-        <div id="exercice4Resultat"></div>
-</div>
 
 
 <footer> <!-- bas de page, lien vers le wiki-->
 <a href="https://lotr.fandom.com/wiki/Peregrin_Took">Wiki page</a>
 </footer>
+</div>
 </div>
 <script src="assets/js/scripts.js"></script> <!--emplacement du ficier javascript pour les scripts-->
 </body>
