@@ -104,10 +104,13 @@ window.onscroll = function() {myFunction()};
 <div id="InputEtSegmentation">
 				<span>
 					<label for="fileInput" class="btn"><small>Select a .txt file :</small></label>
-					<input id="fileInput" type="file" accept="text/plain" name="Fichier (.txt)" />
+					<input id="fileInput" type="file" accept="text/plain" name="Fichier (.txt)"/>
 				</span>
+				<div id="logger1"></div>
+				<div id="logger2"></div>
+				<div id="logger3"></div>
 				<br/>
-        <textarea id="texteExercice4" name="mon_texte" rows="10" cols="40" placeholder="Enter here the text you want to segment into 'words'."></textarea>
+        <textarea id="texteExercice4" name="mon_texte" rows="10" cols="40" placeholder="Enter your text here."></textarea>
 			<br />
 			<p style="text-align:center;">
 				<small>
@@ -116,56 +119,48 @@ window.onscroll = function() {myFunction()};
 					<input type="text" placeholder=" ,;’'~|&#@=`-.?!%*$()[]{}_:+«»§\/" name="delim" id="delimID" size="40" />
 				</small>
 				<br />
-				<!--<small>
-					<label for="poleID" class="mylabel">Pôle</label>
+				<small>
+					<label for="poleID" class="mylabel">Pole</label>
 					&nbsp;
-					<input type="text" placeholder="entrez un pôle..." name="pole" id="poleID" size="20" />
+					<input type="text" placeholder="Enter a pole" name="pole" id="poleID" size="20" />
 				</small>
-				&nbsp;-->
+				&nbsp;
 				<small>
 					<label for="lgID" class="mylabel">Length</label>
 					&nbsp;
 					<input type="text" value="10" name="lg" id="lgID" size="10" />
 				</small>
 				<br />
-				<br />
-				<button onclick="alert('Greetings!');"><span>Greetings.</span></button>
-				<br />
-				<br />
-				<button class = "submit" id="segmentButton" onclick="Segmentation()"><span>Segmentation (txt file)</span></button>
-				<button class="submit" onclick="exercice4()"><span>Segmentation (text entered above)</span></button>
+				<p>Usable on text from a <b>.txt file :</b></p>
 				<button class="submit" onclick="dictionnaire()"><span>Dictionary</span></button>
-				<button class="submit" onclick="alert('Je ne fais rien, changez-moi !')"><span>action 3</span></button>
-				<button class="submit" onclick="alert('Je ne fais rien, changez-moi !')"><span>action 4</span></button>
-				<button class="submit" onclick="alert('Je ne fais rien, changez-moi !')"><span>action 5</span></button>
-				<button class="submit" onclick="alert('Je ne fais rien, changez-moi !')"><span>action 6</span></button>
+				<button class="submit" onclick="nbPhrases()"><span>Number of sentences</span></button>
+				<button class="submit" onclick="tokenLong()"><span>Longest words</span></button>
+				<p>Usable either on a <b>.txt file</b> or on the <b>text entered above</b> :</p>
+				<button class ="submit" id="segmentButton" onclick="Segmentation()"><span>Segmentation</span></button>
+				<button class="submit" onclick="GREP()"><span>GREP</span></button>
+				<button class="submit" onclick="Concordancier()"><span>Concordancer</span></button>
+				<button class="submit" onclick="altMinMaj()"><span>oH rEaLlY?</span></button>
 			</p>
 		<div id="logger" style="width:100%"></div>
 		<br />
 		<div id="Global">
-	<h2>Text display area:</h2>
 			<div id="fileDisplayArea"></div>
 			<br/>
 			<div class="tablelist">
 				<div id="page-analysis"></div>
+				<table id="page-analysis1"></table>
 			</div>
-	<h2>Tokens display area :</h2>
-			<div class="tablelist">
-				<div id="tokens-display"></div>
-			</div>
-		</div>	
 </div>
 </div>
 <h2>☆.𓋼𓍊 𓆏 𓍊𓋼𓍊.☆</h2>
 <br/>
-
-
+</div>
+</div>
 
 <footer> <!-- bas de page, lien vers le wiki-->
 <a href="https://lotr.fandom.com/wiki/Peregrin_Took">Wiki page</a>
 </footer>
-</div>
-</div>
+
 <script src="assets/js/scripts.js"></script> <!--emplacement du ficier javascript pour les scripts-->
 </body>
 </html>
