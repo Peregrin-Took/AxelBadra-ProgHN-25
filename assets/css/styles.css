@@ -53,6 +53,7 @@ img {
 }
 div.Pippin {
 	border: dotted yellow;
+	background-color: #ace461;
 	border-radius: 10px;
 	padding: 10px;
 }
@@ -117,6 +118,26 @@ ul{
 div.highlight {
 	text-align: center;
 	background-color: #ace461;
+	margin-left: 2%;
+	margin-right: 2%;
+	border-radius: 10px;
+	margin-bottom: 2%;
+}
+div.highlight2 {
+	text-align: center;
+	background-color: #ace461;
+	border-radius: 15px;
+	margin-left: 40%;
+	margin-right: 32%;
+	margin-bottom: 2%;
+}
+div.highlight3 {
+	text-align: center;
+	background-color: #ace461;
+	border-radius: 15px;
+	margin-left: 25%;
+	margin-right: 20%;
+	margin-bottom: 2%;
 }
 
 /*base du projet, exercice en classe*/
